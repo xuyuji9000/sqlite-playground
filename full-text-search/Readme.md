@@ -4,7 +4,7 @@
 # tokenize=icu zh_CN
 # tokenize=unicode61
 
-CREATE VIRTUAL TABLE email USING fts5(sender, title, body, tokenize=unicode61);
+CREATE VIRTUAL TABLE email USING fts4(sender, title, body, tokenize=icu zh_CN);
 ```
 
 - Inseart data
