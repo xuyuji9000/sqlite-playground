@@ -1,7 +1,10 @@
 - Create table
 
 ```
-CREATE VIRTUAL TABLE email USING fts5(sender, title, body);
+# tokenize=icu zh_CN
+# tokenize=unicode61
+
+CREATE VIRTUAL TABLE email USING fts5(sender, title, body, tokenize=unicode61);
 ```
 
 - Inseart data
@@ -40,5 +43,5 @@ VALUES
 
 ```
 # default fts5 not working for Chinese
-SELECT * FROM email WHERE email MATCH '标题';
+SELECT * FROM email WHERE email MATCH "标题";
 ```
