@@ -20,3 +20,13 @@ CREATE TABLE trip (
 2. enable csv mode `.mode csv`
 
 3. import data from csv file: `.import uber-raw-data-janjune-15.csv trip`
+
+
+### Benchmarking
+
+
+#### Sqlite3
+
+Group by Dispatching_base_num: `time echo 'select count(*) from trip group by Dispatching_base_num' |sqlite3 trip.sqlite3`
+
+0m5.577s
