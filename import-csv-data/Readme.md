@@ -27,6 +27,4 @@ CREATE TABLE trip (
 
 #### Sqlite3
 
-Group by Dispatching_base_num: `time echo 'select count(*) from trip group by Dispatching_base_num' |sqlite3 trip.sqlite3`
-
-0m5.577s
+Group by Dispatching_base_num: `time echo 'select Dispatching_base_num, count(*) from trip group by Dispatching_base_num;' |sqlite3 trip.sqlite3`
